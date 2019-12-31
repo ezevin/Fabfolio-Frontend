@@ -1,67 +1,64 @@
 import React, { Component } from 'react';
 
 import './App.css';
+
 import Header from './Components/Header/Header.js'
+import Home from './Components/HomePage/Home/Home.js'
 
 class App extends Component {
   state = {
-
+    projects: [],
+    materials: [],
   }
 
   componentDidMount(){
-    this.checkUser()
     this.fetchNotes()
     this.fetchResearch()
     this.fetchToDoList()
   }
 
   //check user//
-  checkUser(){
-    const token = localStorage.getItem('token')
-    console.log("token is", token);
-    if(token){
-      fetch('http://localhost:3000/api/v1/current_user', {
-        headers: {
-          Authorization: token
-        }
-      })
-      .then(res => res.json())
-      .then((user) => {
-        if (!user.error){
-          this.setState({currentUser: user})
-        }
-        let id = this.state.currentUser.id
-        fetch(`http://localhost:3000/api/v1/users/${id}`)
-        .then(res => res.json())
-        .then(data => this.setState({projects: data.projects, materials: data.materials, user: data}))
-        this.setState({id: id})
-      })
-    }
-  }
 
   //fetch data //
-  fetchResearch(){
+  fetchResearch = () => {
     fetch('http://localhost:3000/api/v1/researches')
     .then(res => res.json())
     .then(data => this.setState({allResearch: data}))
   }
 
-  fetchToDoList(){
+  fetchToDoList = () => {
     fetch('http://localhost:3000/api/v1/researches')
     .then(res => res.json())
     .then(data => this.setState({allResearch: data}))
   }
 
-  fetchNotes(){
+  fetchNotes = ()=> {
     fetch('http://localhost:3000/api/v1/researches')
     .then(res => res.json())
     .then(data => this.setState({allResearch: data}))
+  }
+
+  fetchProjects = () => {
+    // let id = this.state.currentUser.id
+    fetch(`http://localhost:3000/api/v1/projects`)
+    .then(res => res.json())
+    .then(data => this.setState({projects: data}))
+    // this.setState({id: id})
   }
 
 
   render (){
+    // const projectTitles = this.state.projects.map(project => {
+    //   console.log(project.title);
+    // })
     return (
+      <>
       <Header />
+      <Home
+        fetchProjects={this.fetchProjects}
+        projects={this.state.projects}
+      />
+      </>
     )
   }
 }
