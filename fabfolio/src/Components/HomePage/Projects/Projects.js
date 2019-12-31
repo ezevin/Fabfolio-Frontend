@@ -7,9 +7,9 @@ class Projects extends Component  {
     return (
       <div>
         <ul>
-          <li id={this.props.id}>
+          <button id={this.props.id}>
             {this.props.names}
-          </li>
+          </button>
         </ul>
       </div>
     )

@@ -19,10 +19,12 @@
 
 .galleryContainer{
   border-style: solid;
+  /* margin-top: -40%; */
+  margin-left: 1vw;
   margin-right: 1vw;
   padding: 1vw;
-  /* height: 50%; */
-  overflow-y: scroll;
+  height: 30vw;
+  /* overflow-y: scroll; */
 }
 
 .homeGrid{

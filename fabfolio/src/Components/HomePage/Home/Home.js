@@ -32,6 +32,11 @@ class Home extends Component {
               <Supplies
                 key={supply.id}
                 item={supply.label}
+                quantity={supply.quantity}
+                price= {supply.price}
+                description= {supply.description}
+                image_url= {supply.image_url}
+                place_purchased= {supply.place_purchased}
               />
             ))}
           </div>
