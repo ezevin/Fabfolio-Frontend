@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 
+import './Projects.css'
+
 class Projects extends Component  {
   render(){
-    console.log(this.props);
     return (
-      <div><ul><li>{this.props.names}</li></ul></div>
+      <div>
+        <ul>
+          <li id={this.props.id}>
+            {this.props.names}
+          </li>
+        </ul>
+      </div>
     )
   }
 }
