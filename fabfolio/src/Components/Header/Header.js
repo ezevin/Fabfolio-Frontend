@@ -8,7 +8,7 @@ class Header extends Component {
       <>
       <h1>FABFOLIO:</h1>
       <h3>A Fabricator's Portfolio </h3>
-      <button> Welcome Name </button>
+      <p> Welcome Name </p>
       <button> Home Link </button>
       <button> Gallery Link </button>
       <button> Current Projects Link </button>

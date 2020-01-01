@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import './Supplies.css'
-import Backdrop from './Backdrop'
+import Backdrop from '../../Backdrop/Backdrop.js'
 import Modal from './Modal'
 
 class Supplies extends Component {
@@ -22,7 +22,6 @@ class Supplies extends Component {
     const { item, quantity, price, description, image_url, place_purchased } = this.props
 
     return (
-      <>
       <div>
         <ul>
           <div>
@@ -46,7 +45,6 @@ class Supplies extends Component {
           </div>
         </ul>
       </div>
-        </>
     )
   }
 }
