@@ -20,7 +20,7 @@ class Projects extends Component  {
 
   render(){
     const { id, name, details, budget, start, due, finished, finished_image, inventory, notes, research, to_do } = this.props
-
+    
     return (
       <div>
         <ul>

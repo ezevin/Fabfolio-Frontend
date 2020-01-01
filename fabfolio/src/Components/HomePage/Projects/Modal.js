@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import "./Modal.css"
+import ToDo from './ToDo/ToDo.js'
 
 class DetailModal extends  Component {
 
@@ -35,7 +36,11 @@ class DetailModal extends  Component {
                 <div className="trioBox">
                   <center> to do list </center>
                   {to_do.map(todo => (
-                    console.log(todo)
+                    <ToDo
+                      key={todo.id}
+                      id={todo.id}
+                      item={todo.item}
+                      complete={todo.complete}/>
                   ))}
                 </div>
                 <div className="trioBox">
