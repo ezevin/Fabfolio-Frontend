@@ -19,7 +19,7 @@ class Projects extends Component  {
   }
 
   render(){
-    const { name } = this.props
+    const { id, name, details, budget, start, due, finished, finished_image, inventory, notes, research, to_do } = this.props
 
     return (
       <div>
@@ -33,17 +33,18 @@ class Projects extends Component  {
           {
             this.state.open && <Modal
               closeModal={this.closeModal}
-              name={this.props.name}
-              details={this.props.details}
-              budget={this.props.budget}
-              start={this.props.start}
-              due={this.props.due}
-              finished={this.props.finished}
-              finished_image={this.props.finished_image}
-              inventory={this.props.inventory}
-              notes={this.props.notes}
-              research={this.props.research}
-              to_do={this.props.to_do}
+              id={id}
+              name={name}
+              details={details}
+              budget={budget}
+              start={start}
+              due={due}
+              finished={finished}
+              finished_image={finished_image}
+              inventory={inventory}
+              notes={notes}
+              research={research}
+              to_do={to_do}
             />
           }
         </ul>

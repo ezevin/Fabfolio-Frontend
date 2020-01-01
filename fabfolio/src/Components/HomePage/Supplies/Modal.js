@@ -14,7 +14,7 @@ class DetailModal extends  Component {
               <div>
                 <img src={image_url} alt={item} />
               </div>
-              <div>
+              <div className="supplyDetails">
                 <h1>{item}</h1>
                 <p><b>Quantity:</b> {quantity}</p>
                 <p><b>Price:</b> ${price}</p>

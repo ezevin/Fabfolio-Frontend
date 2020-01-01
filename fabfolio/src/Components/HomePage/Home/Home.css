@@ -1,20 +1,35 @@
 .projectContainer{
   border-style: solid;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  margin-bottom: 1vw;
+  border-top-style: none;
+  margin: 0vw 1vw 1vw 1vw;
   padding: 1vw;
   height: 40vh;
   overflow-y: scroll;
 }
 
+.projectlist{
+  border-style: solid;
+  border-bottom-style: none;
+  margin: 1vw 1vw 0vw 1vw;
+  padding: 1vw;
+  text-decoration: underline;
+}
+
 .supplyContainer{
   border-style: solid;
-  margin-right: 1vw;
-  margin-bottom: 1vw;
+  border-top-style: none;
+  margin: 0vw 1vw 1vw 1vw;
   padding: 1vw;
   height: 40vh;
   overflow-y: scroll;
+}
+
+.inventorylist{
+  border-style: solid;
+  border-bottom-style: none;
+  margin: 1vw 1vw 0vw 1vw;
+  padding: 1vw;
+  text-decoration: underline;
 }
 
 .galleryContainer{
@@ -23,7 +38,7 @@
   margin-left: 1vw;
   margin-right: 1vw;
   padding: 1vw;
-  height: 30vh;
+  height: 40vh;
   /* overflow-y: scroll; */
 }
 
@@ -34,4 +49,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* grid-auto-flow: column; */
+}
+
+.scroll{
+  overflow-y: scroll;
 }

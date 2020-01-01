@@ -59,15 +59,15 @@ class App extends Component {
     //   console.log(project.title);
     // })
     return (
-      <>
-      <Header />
-      <Home
-        fetchProjects={this.fetchProjects}
-        projects={this.state.projects}
-        fetchSupplies={this.fetchSupplies}
-        supplies={this.state.supplies}
-      />
-      </>
+      <div className="mainGrid">
+          <Header />
+          <Home
+            fetchProjects={this.fetchProjects}
+            projects={this.state.projects}
+            fetchSupplies={this.fetchSupplies}
+            supplies={this.state.supplies}
+          />
+      </div>
     )
   }
 }

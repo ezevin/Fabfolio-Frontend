@@ -17,27 +17,32 @@ class Home extends Component {
     return(
       <div>
         <div className="homeGrid">
+        <center>
+          <h1 className="projectlist"> Project List </h1>
+        </center>
+        <center>
+          <h1 className="inventorylist">Inventory </h1>
+        </center>
           <div className="projectContainer">
-            <h1> Project List </h1>
-            {projects.map(project => (
-              <Projects
-                key={project.id}
-                name={project.title}
-                details={project.details}
-                budget={project.budget}
-                start={project.start_date}
-                due={project.due_date}
-                finished={project.finished}
-                finished_image={project.finished_image}
-                inventory={project.inventories}
-                notes={project.notes}
-                research={project.researches}
-                to_do={project.to_do_lists}
-              />
-            ))}
+              {projects.map(project => (
+                <Projects
+                  key={project.id}
+                  id={project.id}
+                  name={project.title}
+                  details={project.details}
+                  budget={project.budget}
+                  start={project.start_date}
+                  due={project.due_date}
+                  finished={project.finished}
+                  finished_image={project.finished_image}
+                  inventory={project.inventories}
+                  notes={project.notes}
+                  research={project.researches}
+                  to_do={project.to_do_lists}
+                />
+              ))}
           </div>
           <div className="supplyContainer">
-            <h1>Inventory </h1>
             {supplies.map(supply => (
               <Supplies
                 key={supply.id}
@@ -52,7 +57,9 @@ class Home extends Component {
           </div>
         </div>
         <div className="galleryContainer">
-          <h1> Photo Gallery </h1>
+          <center>
+            <h1> Photo Gallery </h1>
+          </center>
         </div>
       </div>
     )

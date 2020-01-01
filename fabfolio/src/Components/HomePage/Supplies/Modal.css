@@ -20,7 +20,11 @@
 
 .modalGrid{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 25%;
+}
+
+.supplyDetails{
+  padding-left: 1vw
 }
 
 img {
