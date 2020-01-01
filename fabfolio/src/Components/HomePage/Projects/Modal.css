@@ -1,10 +1,10 @@
-.modal {
-  width: 50%;
+.projectmodal {
+  width: 88%;
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   position: fixed;
   top: 5vh;
-  left: 25%;
+  left: 5%;
   padding: 1vw;
 }
 
@@ -18,9 +18,33 @@
   border-radius: 50%
 }
 
-.modalGrid{
+.headerGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.trioGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.trioBox{
+  border-style: solid;
+  margin: 1vw;
+}
+
+.photoGrid{
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.photoBox{
+  border-style: solid;
+  margin: 1vw;
+}
+
+.right{
+  float: right;
 }
 
 img {

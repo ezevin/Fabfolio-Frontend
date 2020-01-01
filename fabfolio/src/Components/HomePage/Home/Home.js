@@ -13,7 +13,7 @@ class Home extends Component {
 
   render(){
     const {  projects, supplies  } = this.props
-    // console.log(this.props);
+
     return(
       <div>
         <div className="homeGrid">
@@ -22,7 +22,17 @@ class Home extends Component {
             {projects.map(project => (
               <Projects
                 key={project.id}
-                names={project.title}
+                name={project.title}
+                details={project.details}
+                budget={project.budget}
+                start={project.start_date}
+                due={project.due_date}
+                finished={project.finished}
+                finished_image={project.finished_image}
+                inventory={project.inventories}
+                notes={project.notes}
+                research={project.researches}
+                to_do={project.to_do_lists}
               />
             ))}
           </div>
