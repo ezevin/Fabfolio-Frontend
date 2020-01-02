@@ -20,7 +20,7 @@ class Projects extends Component  {
 
   render(){
     const { id, name, details, budget, start, due, finished, finished_image, inventory, notes, research, to_do } = this.props
-    
+
     return (
       <div>
         <ul>
@@ -39,8 +39,6 @@ class Projects extends Component  {
               budget={budget}
               start={start}
               due={due}
-              finished={finished}
-              finished_image={finished_image}
               inventory={inventory}
               notes={notes}
               research={research}

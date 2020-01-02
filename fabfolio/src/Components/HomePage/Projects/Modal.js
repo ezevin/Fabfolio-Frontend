@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 
 import "./Modal.css"
 import ToDo from './ToDo/ToDo.js'
+import Notes from './Notes/Notes.js'
 
 class DetailModal extends  Component {
 
   render(){
-    const { name, details, budget, start, due, finished, finished_image, inventory, notes, research, to_do } = this.props
+    const { name, details, budget, start, due, inventory, notes, research, to_do } = this.props
 
     return (
           <div className="projectmodal">
@@ -30,7 +31,11 @@ class DetailModal extends  Component {
                 <div className="trioBox">
                   <center> notes </center>
                   {notes.map(note => (
-                    console.log(note)
+                    <Notes
+                      key={note.id}
+                      id={note.id}
+                      note={note.note}
+                    />
                   ))}
                 </div>
                 <div className="trioBox">
