@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 
-import Header from './Components/Header/Header.js'
+import NavBar from './Components/NavBar/NavBar.js'
 import Home from './Components/HomePage/Home/Home.js'
 
 class App extends Component {
@@ -60,7 +60,7 @@ class App extends Component {
     // })
     return (
       <div className="mainGrid">
-          <Header />
+          <NavBar />
           <Home
             fetchProjects={this.fetchProjects}
             projects={this.state.projects}

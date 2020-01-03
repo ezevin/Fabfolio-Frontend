@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import "./Modal.css"
 import ToDo from './ToDo/ToDo.js'
 import Notes from './Notes/Notes.js'
+import Inventory from './Inventory/Inventory.js'
 
-class DetailModal extends  Component {
+class Modal extends  Component {
 
   render(){
     const { name, details, budget, start, due, inventory, notes, research, to_do } = this.props
@@ -51,7 +52,15 @@ class DetailModal extends  Component {
                 <div className="trioBox">
                   <center> inventory </center>
                   {inventory.map(item => (
-                    console.log(item)
+                    <Inventory
+                      key={item.id}
+                      id={item.id}
+                      item={item.label}
+                      price= {item.price}
+                      description= {item.description}
+                      image_url= {item.image_url}
+                      place_purchased= {item.place_purchased}
+                    />
                   ))}
                 </div>
               </div>
@@ -73,4 +82,4 @@ class DetailModal extends  Component {
   }
 }
 
-export default DetailModal
+export default Modal

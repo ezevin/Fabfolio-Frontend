@@ -26,8 +26,9 @@ class Supplies extends Component {
         <ul>
           <div>
             <button onClick={this.openModal}>
-            {item} - {quantity}
+              {item}
             </button>
+              - {quantity}
             {
               this.state.open && <Backdrop />
             }
