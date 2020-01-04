@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import './Home.css'
 import Projects from '../Projects/Projects.js'
 import Supplies from '../Supplies/Supplies.js'
+import Gallery from '../Gallery/Gallery.js'
 
 class Home extends Component {
 
@@ -12,8 +13,8 @@ class Home extends Component {
   }
 
   render(){
-    const {  projects, supplies  } = this.props
-
+    const {  projects, supplies, finished } = this.props
+    console.log(finished);
     return(
       <div>
         <div className="homeGrid">
@@ -59,6 +60,16 @@ class Home extends Component {
         <div className="galleryContainer">
           <center>
             <h1> Photo Gallery </h1>
+            <div className="galleryGrid">
+              {finished.map(finish => (
+                <Gallery
+                  key={finish.id}
+                  id={finish.id}
+                  name={finish.title}
+                  image={finish.finished_image}
+                />
+              ))}
+            </div>
           </center>
         </div>
       </div>

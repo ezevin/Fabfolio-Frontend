@@ -51,6 +51,11 @@
   /* grid-auto-flow: column; */
 }
 
+.galleryGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
 .scroll{
   overflow-y: scroll;
 }

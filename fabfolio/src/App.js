@@ -55,15 +55,21 @@ class App extends Component {
 
 
   render (){
-        // const projectTitles = this.state.projects.map(project => {
-    //   console.log(project.title);
-    // })
+
+    const projects = this.state.projects.filter(project  => (
+      project.finished === false
+    ))
+    const finished = this.state.projects.filter(project => (
+      project.finished
+    ))
+
     return (
       <div className="mainGrid">
           <NavBar />
           <Home
             fetchProjects={this.fetchProjects}
-            projects={this.state.projects}
+            projects={projects}
+            finished={finished}
             fetchSupplies={this.fetchSupplies}
             supplies={this.state.supplies}
           />
